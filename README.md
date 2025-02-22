@@ -35,10 +35,12 @@ This small project generates a TikTok-style video using a completely AI-generate
 
 4. **Set up API credentials:**
    - **Gemini API:** Create a `.env` file and add your API key:
+   
      ```sh
      echo "API_KEY=your_gemini_api_key" > .env
      ```
    - **Google Cloud Platform (GCP) API:** Set up your service account credentials:
+
      ```sh
      export GOOGLE_APPLICATION_CREDENTIALS="path/to/credentials.json"
      ```
@@ -49,5 +51,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 **Zain Sharief** - zain.sharief21@gmail.com - [LinkedIn](https://www.linkedin.com/in/zain-sharief-5193b425b/)
 
-Project Link: [GitHub Repository](https://github.com/ZainSharief/ai-story-generator)
+Project Link: [https://github.com/ZainSharief/ai-story-generator](https://github.com/ZainSharief/ai-story-generator)
 
