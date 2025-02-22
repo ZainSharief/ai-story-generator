@@ -13,7 +13,7 @@ This small project generates a TikTok-style video using a completely AI-generate
 ## Features
 - Generates a story using the Gemini API.
 - Converts the story to speech using the Google Cloud Text-to-Speech API.
-- Randomly crops a video from the provided collection (which can be preprocessed using [video_crop](video_crop.py)) to match the audio duration.
+- Randomly crops a video from the provided collection (which can be preprocessed using [video_crop](src/video_crop.py)) to match the audio duration.
 - Generates and displays subtitles for the video.
 
 ## Installation
