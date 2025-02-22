@@ -1,0 +1,5 @@
+moviepy==2.1.2
+mutagen==1.47.0
+opencv_python==4.11.0.86
+protobuf==5.29.3
+python-dotenv==1.0.1

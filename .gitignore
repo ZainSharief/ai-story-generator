@@ -1,0 +1,11 @@
+__pycache__/
+videos/
+audios/
+
+*.mp3
+*.mp4
+
+.env
+credentials.json
+
+.DS_Store
