@@ -34,14 +34,12 @@ def video_crop(input_path: str, output_path: str) -> None:
     
     # Save the cropped video
     video = mp.VideoFileClip(input_path)
-    cropped_video = video.cropped(x1=x_start, y1=y_start, x2=x_start + new_width, y2=y_start + new_height)
+    cropped_video = video.cropped(x1=x_start, y1=y_start, x2=x_start + new_width, y2=y_start + new_height).without_audio()
     cropped_video.write_videofile(output_path, codec='libx264', fps=fps)
-    
-    video.release()
 
 if __name__ == '__main__':
 
-    input_path = "Minecraft Parkour Gameplay No Copyright 720.mp4"
-    output_path = "background_portrait.mp4"
+    input_path = "videos/Subway surfers 1 hour Gameplay no commentary free to use.mp4"
+    output_path = "videos/subway-surfers_background.mp4"
 
     video_crop(input_path, output_path)
