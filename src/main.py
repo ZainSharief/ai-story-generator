@@ -1,11 +1,11 @@
 from moviepy import VideoFileClip, AudioFileClip, TextClip, CompositeVideoClip
 from moviepy import concatenate_videoclips
-from mutagen.mp3 import MP3
 import random
 import os
 
 from text_to_speech import text_to_speech
 from story_generator import story_generator
+from post_video import post_video
 
 import time
 
@@ -24,6 +24,7 @@ def main():
     begin_time = time.time()
 
     WORDS_PER_FRAME = 4
+    OUTPUT_PATH = 'final_video.mp4'
 
     prompt = 'Create a scadulous story based on AM I THE ASSHOLE reddit thread. Do not include any additional text, analysis and make it a single paragraph of text. Make the story easy tp follow and use simple words. It cannot be more than 200 words'
     text = story_generator(prompt=prompt)
@@ -77,10 +78,14 @@ def main():
     final_video = concatenate_videoclips(video_segment_list, method="compose")
     final_audio = AudioFileClip('final_audio.mp3')
     final_video = final_video.with_audio(final_audio)
-    final_video.write_videofile('final_video.mp4', codec='libx264', audio_codec='mp3')
+    final_video.write_videofile(OUTPUT_PATH, codec='libx264', audio_codec='mp3')
 
     # Clean up
     os.remove(output_audio_path)
+
+    caption = "Comment your thoughts! #viral #trending #explore #explorepage #foryou #foryoupage #reels #reelsinstagram #instagramreels #reelsvideo #instareels"
+
+    post_video(OUTPUT_PATH, caption)
 
     print(f'process took {time.time() - begin_time} seconds')
 

@@ -6,8 +6,11 @@ audios/
 
 *.mp3
 *.mp4
+*.jpg
 
 .env
 credentials.json
+config.ini
+session.json
 
 .DS_Store
